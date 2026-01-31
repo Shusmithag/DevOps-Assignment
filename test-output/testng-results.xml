@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="3" passed="0" failed="3" skipped="0">
+<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-01-31T22:54:02 IST" name="Suite" finished-at="2026-01-31T22:54:09 IST" duration-ms="7133">
+  <suite started-at="2026-02-01T04:26:40 IST" name="Suite" finished-at="2026-02-01T04:26:57 IST" duration-ms="16979">
     <groups>
     </groups>
-    <test started-at="2026-01-31T22:54:02 IST" name="ChromeTest" finished-at="2026-01-31T22:54:08 IST" duration-ms="6466">
+    <test started-at="2026-02-01T04:26:40 IST" name="ChromeTest" finished-at="2026-02-01T04:26:53 IST" duration-ms="13462">
       <class name="com.DockerTestUsingGrid.AmazonGridTest">
-        <test-method is-config="true" signature="setup(java.lang.String)[pri:0, instance:com.DockerTestUsingGrid.AmazonGridTest@55182842]" started-at="2026-01-31T22:54:02 IST" name="setup" finished-at="2026-01-31T22:54:05 IST" duration-ms="2785" status="PASS">
+        <test-method signature="browserTest(java.lang.String)[pri:0, instance:com.DockerTestUsingGrid.AmazonGridTest@6f1de4c7]" started-at="2026-02-01T04:26:40 IST" name="browserTest" finished-at="2026-02-01T04:26:53 IST" duration-ms="13399" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -17,155 +17,27 @@
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method signature="amazonSearchTest()[pri:0, instance:com.DockerTestUsingGrid.AmazonGridTest@55182842]" started-at="2026-01-31T22:54:05 IST" name="amazonSearchTest" finished-at="2026-01-31T22:54:08 IST" duration-ms="3527" status="FAIL">
-          <exception class="org.openqa.selenium.NoSuchElementException">
-            <message>
-              <![CDATA[no such element: Unable to locate element: {"method":"css selector","selector":"#twotabsearchtextbox"}
-  (Session info: chrome=122.0.6261.69)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
-Build info: version: '4.40.0', revision: 'b3333f1'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.8'
-Driver info: org.openqa.selenium.remote.RemoteWebDriver
-Command: [0fc0baa1df4334f39ac78dd0f957ff61, findElement {using=id, value=twotabsearchtextbox}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 122.0.6261.69, chrome: {chromedriverVersion: 122.0.6261.69 (81bc525b6a36..., userDataDir: /tmp/.org.chromium.Chromium...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:40989}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: linux, proxy: Proxy(), se:bidiEnabled: false, se:cdp: ws://172.18.0.4:4444/sessio..., se:cdpVersion: 122.0.6261.69, se:vnc: ws://172.18.0.4:4444/sessio..., se:vncEnabled: true, se:vncLocalAddress: ws://172.18.0.4:7900, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 0fc0baa1df4334f39ac78dd0f957ff61]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"#twotabsearchtextbox"}
-  (Session info: chrome=122.0.6261.69)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
-Build info: version: '4.40.0', revision: 'b3333f1'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.8'
-Driver info: org.openqa.selenium.remote.RemoteWebDriver
-Command: [0fc0baa1df4334f39ac78dd0f957ff61, findElement {using=id, value=twotabsearchtextbox}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 122.0.6261.69, chrome: {chromedriverVersion: 122.0.6261.69 (81bc525b6a36..., userDataDir: /tmp/.org.chromium.Chromium...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:40989}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: linux, proxy: Proxy(), se:bidiEnabled: false, se:cdp: ws://172.18.0.4:4444/sessio..., se:cdpVersion: 122.0.6261.69, se:vnc: ws://172.18.0.4:4444/sessio..., se:vncEnabled: true, se:vncLocalAddress: ws://172.18.0.4:7900, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 0fc0baa1df4334f39ac78dd0f957ff61
-at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:169)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:142)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:223)
-at org.openqa.selenium.remote.TracedCommandExecutor.execute(TracedCommandExecutor.java:53)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:601)
-at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:166)
-at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:67)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:424)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:418)
-at com.DockerTestUsingGrid.AmazonGridTest.amazonSearchTest(AmazonGridTest.java:38)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:697)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:1005)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-at org.testng.TestRunner.privateRun(TestRunner.java:744)
-at org.testng.TestRunner.run(TestRunner.java:616)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:463)
-at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
-at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
-at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
-at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
-at java.base/java.lang.Thread.run(Thread.java:1583)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- amazonSearchTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.DockerTestUsingGrid.AmazonGridTest@55182842]" started-at="2026-01-31T22:54:08 IST" name="tearDown" finished-at="2026-01-31T22:54:08 IST" duration-ms="111" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
+        </test-method> <!-- browserTest -->
       </class> <!-- com.DockerTestUsingGrid.AmazonGridTest -->
     </test> <!-- ChromeTest -->
-    <test started-at="2026-01-31T22:54:02 IST" name="EdgeTest" finished-at="2026-01-31T22:54:09 IST" duration-ms="7055">
+    <test started-at="2026-02-01T04:26:40 IST" name="EdgeTest" finished-at="2026-02-01T04:26:55 IST" duration-ms="14627">
       <class name="com.DockerTestUsingGrid.AmazonGridTest">
-        <test-method is-config="true" signature="setup(java.lang.String)[pri:0, instance:com.DockerTestUsingGrid.AmazonGridTest@7a8c8dcf]" started-at="2026-01-31T22:54:02 IST" name="setup" finished-at="2026-01-31T22:54:05 IST" duration-ms="3062" status="PASS">
+        <test-method signature="browserTest(java.lang.String)[pri:0, instance:com.DockerTestUsingGrid.AmazonGridTest@3b0090a4]" started-at="2026-02-01T04:26:40 IST" name="browserTest" finished-at="2026-02-01T04:26:55 IST" duration-ms="14569" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[MicrosoftEdge]]>
+                <![CDATA[edge]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method signature="amazonSearchTest()[pri:0, instance:com.DockerTestUsingGrid.AmazonGridTest@7a8c8dcf]" started-at="2026-01-31T22:54:05 IST" name="amazonSearchTest" finished-at="2026-01-31T22:54:08 IST" duration-ms="2829" status="FAIL">
-          <exception class="org.openqa.selenium.NoSuchElementException">
-            <message>
-              <![CDATA[no such element: Unable to locate element: {"method":"css selector","selector":"#twotabsearchtextbox"}
-  (Session info: MicrosoftEdge=122.0.2365.52)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
-Build info: version: '4.40.0', revision: 'b3333f1'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.8'
-Driver info: org.openqa.selenium.remote.RemoteWebDriver
-Command: [dcf8236cc7408874187e6408cea29a9f, findElement {using=id, value=twotabsearchtextbox}]
-Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 122.0.2365.52, fedcm:accounts: true, ms:edgeOptions: {debuggerAddress: localhost:39851}, msedge: {msedgedriverVersion: 122.0.2365.38 (4f1af62761c0..., userDataDir: /tmp/.com.microsoft.Edge.VY...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: linux, proxy: Proxy(), se:bidiEnabled: false, se:cdp: ws://172.18.0.3:4444/sessio..., se:cdpVersion: 122.0.2365.52, se:vnc: ws://172.18.0.3:4444/sessio..., se:vncEnabled: true, se:vncLocalAddress: ws://172.18.0.3:7900, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: dcf8236cc7408874187e6408cea29a9f]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"#twotabsearchtextbox"}
-  (Session info: MicrosoftEdge=122.0.2365.52)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
-Build info: version: '4.40.0', revision: 'b3333f1'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.8'
-Driver info: org.openqa.selenium.remote.RemoteWebDriver
-Command: [dcf8236cc7408874187e6408cea29a9f, findElement {using=id, value=twotabsearchtextbox}]
-Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 122.0.2365.52, fedcm:accounts: true, ms:edgeOptions: {debuggerAddress: localhost:39851}, msedge: {msedgedriverVersion: 122.0.2365.38 (4f1af62761c0..., userDataDir: /tmp/.com.microsoft.Edge.VY...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: linux, proxy: Proxy(), se:bidiEnabled: false, se:cdp: ws://172.18.0.3:4444/sessio..., se:cdpVersion: 122.0.2365.52, se:vnc: ws://172.18.0.3:4444/sessio..., se:vncEnabled: true, se:vncLocalAddress: ws://172.18.0.3:7900, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: dcf8236cc7408874187e6408cea29a9f
-at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:169)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:142)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:223)
-at org.openqa.selenium.remote.TracedCommandExecutor.execute(TracedCommandExecutor.java:53)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:601)
-at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:166)
-at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:67)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:424)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:418)
-at com.DockerTestUsingGrid.AmazonGridTest.amazonSearchTest(AmazonGridTest.java:38)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:697)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:1005)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-at org.testng.TestRunner.privateRun(TestRunner.java:744)
-at org.testng.TestRunner.run(TestRunner.java:616)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:463)
-at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
-at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
-at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
-at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
-at java.base/java.lang.Thread.run(Thread.java:1583)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- amazonSearchTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.DockerTestUsingGrid.AmazonGridTest@7a8c8dcf]" started-at="2026-01-31T22:54:08 IST" name="tearDown" finished-at="2026-01-31T22:54:09 IST" duration-ms="1124" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
+        </test-method> <!-- browserTest -->
       </class> <!-- com.DockerTestUsingGrid.AmazonGridTest -->
     </test> <!-- EdgeTest -->
-    <test started-at="2026-01-31T22:54:02 IST" name="FirefoxTest" finished-at="2026-01-31T22:54:09 IST" duration-ms="7133">
+    <test started-at="2026-02-01T04:26:40 IST" name="FirefoxTest" finished-at="2026-02-01T04:26:57 IST" duration-ms="16979">
       <class name="com.DockerTestUsingGrid.AmazonGridTest">
-        <test-method is-config="true" signature="setup(java.lang.String)[pri:0, instance:com.DockerTestUsingGrid.AmazonGridTest@1ce24091]" started-at="2026-01-31T22:54:02 IST" name="setup" finished-at="2026-01-31T22:54:06 IST" duration-ms="4218" status="PASS">
+        <test-method signature="browserTest(java.lang.String)[pri:0, instance:com.DockerTestUsingGrid.AmazonGridTest@9d5509a]" started-at="2026-02-01T04:26:40 IST" name="browserTest" finished-at="2026-02-01T04:26:57 IST" duration-ms="16923" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -175,69 +47,7 @@ at java.base/java.lang.Thread.run(Thread.java:1583)
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method signature="amazonSearchTest()[pri:0, instance:com.DockerTestUsingGrid.AmazonGridTest@1ce24091]" started-at="2026-01-31T22:54:06 IST" name="amazonSearchTest" finished-at="2026-01-31T22:54:08 IST" duration-ms="2043" status="FAIL">
-          <exception class="org.openqa.selenium.NoSuchElementException">
-            <message>
-              <![CDATA[Unable to locate element: #twotabsearchtextbox
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
-Build info: version: '4.40.0', revision: 'b3333f1'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.8'
-Driver info: org.openqa.selenium.remote.RemoteWebDriver
-Command: [c4e0eea9-61cf-4ec4-96b1-393fd95e274f, findElement {using=id, value=twotabsearchtextbox}]
-Capabilities {acceptInsecureCerts: false, browserName: firefox, browserVersion: 123.0, moz:accessibilityChecks: false, moz:buildID: 20240213221259, moz:geckodriverVersion: 0.34.0, moz:headless: false, moz:platformVersion: 6.6.87.2-microsoft-standard..., moz:processID: 169, moz:profile: /tmp/rust_mozprofilewla5JF, moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: linux, proxy: Proxy(), se:bidiEnabled: false, se:cdp: ws://172.18.0.5:4444/sessio..., se:noVncPort: 7900, se:vnc: ws://172.18.0.5:4444/sessio..., se:vncEnabled: true, se:vncLocalAddress: ws://172.18.0.5:7900, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: c4e0eea9-61cf-4ec4-96b1-393fd95e274f]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: Unable to locate element: #twotabsearchtextbox
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
-Build info: version: '4.40.0', revision: 'b3333f1'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.8'
-Driver info: org.openqa.selenium.remote.RemoteWebDriver
-Command: [c4e0eea9-61cf-4ec4-96b1-393fd95e274f, findElement {using=id, value=twotabsearchtextbox}]
-Capabilities {acceptInsecureCerts: false, browserName: firefox, browserVersion: 123.0, moz:accessibilityChecks: false, moz:buildID: 20240213221259, moz:geckodriverVersion: 0.34.0, moz:headless: false, moz:platformVersion: 6.6.87.2-microsoft-standard..., moz:processID: 169, moz:profile: /tmp/rust_mozprofilewla5JF, moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: linux, proxy: Proxy(), se:bidiEnabled: false, se:cdp: ws://172.18.0.5:4444/sessio..., se:noVncPort: 7900, se:vnc: ws://172.18.0.5:4444/sessio..., se:vncEnabled: true, se:vncLocalAddress: ws://172.18.0.5:7900, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: c4e0eea9-61cf-4ec4-96b1-393fd95e274f
-at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:169)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:142)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:223)
-at org.openqa.selenium.remote.TracedCommandExecutor.execute(TracedCommandExecutor.java:53)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:601)
-at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:166)
-at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:67)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:424)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:418)
-at com.DockerTestUsingGrid.AmazonGridTest.amazonSearchTest(AmazonGridTest.java:38)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:697)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:1005)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-at org.testng.TestRunner.privateRun(TestRunner.java:744)
-at org.testng.TestRunner.run(TestRunner.java:616)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:463)
-at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
-at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
-at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
-at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
-at java.base/java.lang.Thread.run(Thread.java:1583)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- amazonSearchTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.DockerTestUsingGrid.AmazonGridTest@1ce24091]" started-at="2026-01-31T22:54:08 IST" name="tearDown" finished-at="2026-01-31T22:54:09 IST" duration-ms="835" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
+        </test-method> <!-- browserTest -->
       </class> <!-- com.DockerTestUsingGrid.AmazonGridTest -->
     </test> <!-- FirefoxTest -->
   </suite> <!-- Suite -->

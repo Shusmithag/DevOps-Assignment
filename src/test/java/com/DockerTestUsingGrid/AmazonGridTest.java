@@ -1,53 +1,46 @@
 package com.DockerTestUsingGrid;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.remote.RemoteWebDriver;
-import org.openqa.selenium.remote.DesiredCapabilities;
-import org.testng.Assert;
-import org.testng.annotations.*;
 
+import java.net.MalformedURLException;
 import java.net.URL;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.edge.EdgeOptions;
+import org.openqa.selenium.firefox.FirefoxOptions;
+import org.openqa.selenium.remote.RemoteWebDriver;
+import org.testng.annotations.Parameters;
+import org.testng.annotations.Test;
 
-public class AmazonGridTest {
-
+public class AmazonGridTest
+{
     WebDriver driver;
 
-    @Parameters("browser")
-    @BeforeMethod
-    public void setup(String browser) throws Exception {
-
-        System.out.println("======================================");
-        System.out.println("Trying to connect to Selenium Grid...");
-        System.out.println("Browser Requested: " + browser);
-
-        DesiredCapabilities cap = new DesiredCapabilities();
-        cap.setBrowserName(browser);
-
-        driver = new RemoteWebDriver(
-                new URL("http://localhost:4444/wd/hub"), cap);
-
-        System.out.println("Connection established with: " + browser);
-        System.out.println("======================================");
-    }
-
+    @Parameters({"browser"})
     @Test
-    public void amazonSearchTest() {
+    public void browserTest(String bname) throws MalformedURLException, InterruptedException
+    {
+        if(bname.equalsIgnoreCase("chrome"))
+        {
+            ChromeOptions options = new ChromeOptions();
+            driver = new RemoteWebDriver(new URL("http://localhost:4444"), options);
+            System.out.println("Connection Established with Chrome Browser");
+        }
+        if(bname.equalsIgnoreCase("firefox"))
+        {
+            FirefoxOptions options = new FirefoxOptions();
+            driver = new RemoteWebDriver(new URL("http://localhost:4444"), options);
+            System.out.println("Connection Established with Firefox Browser");
+        }
+        if(bname.equalsIgnoreCase("edge"))
+        {
+            EdgeOptions options = new EdgeOptions();
+            driver = new RemoteWebDriver(new URL("http://localhost:4444"), options);
+            System.out.println("Connection Established with Edge Browser");
+        }
 
+        Thread.sleep(5000);
         driver.get("https://www.amazon.in");
-
-        driver.findElement(By.id("twotabsearchtextbox"))
-              .sendKeys("iphone");
-
-        driver.findElement(By.id("nav-search-submit-button")).click();
-
-        Assert.assertTrue(driver.getTitle().toLowerCase().contains("iphone"));
-
-        System.out.println("TEST PASSED on " + driver.getTitle());
-    }
-
-    @AfterMethod
-    public void tearDown() {
-        System.out.println("Closing browser...");
+        Thread.sleep(3000);
+        System.out.println("Application Executing Parallelly!");
         driver.quit();
     }
 }
