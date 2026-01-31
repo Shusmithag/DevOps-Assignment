@@ -14,7 +14,7 @@ pipeline {
 
         stage('Checkout AmazonDockerGrid') {
             steps {
-                git url: 'https://github.com/Shusmitha/AmazonDockerGrid.git',
+                git url: 'https://github.com/Shusmithag/DevOps-Assignment',
                     credentialsId: '8bb1d8e6-0723-451f-a475-3bd618553bf9'
             }
         }
