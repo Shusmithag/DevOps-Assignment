@@ -1,12 +1,19 @@
 package com.DockerTestUsingGrid;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.firefox.FirefoxOptions;
+import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.remote.RemoteWebDriver;
-import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.*;
 
 import java.net.URL;
+import java.time.Duration;
 
 public class AmazonGridTest {
 
@@ -20,11 +27,23 @@ public class AmazonGridTest {
         System.out.println("Trying to connect to Selenium Grid...");
         System.out.println("Browser Requested: " + browser);
 
-        DesiredCapabilities cap = new DesiredCapabilities();
-        cap.setBrowserName(browser);
-
-        driver = new RemoteWebDriver(
-                new URL("http://localhost:4444/wd/hub"), cap);
+        // Setup browser options for Grid
+        if(browser.equalsIgnoreCase("chrome")) {
+            ChromeOptions options = new ChromeOptions();
+            options.addArguments("--headless"); // optional for Jenkins
+            options.addArguments("--no-sandbox");
+            options.addArguments("--disable-dev-shm-usage");
+            driver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), options);
+        } else if(browser.equalsIgnoreCase("firefox")) {
+            FirefoxOptions options = new FirefoxOptions();
+            options.addArguments("--headless");
+            driver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), options);
+        } else if(browser.equalsIgnoreCase("edge")) {
+            EdgeOptions options = new EdgeOptions();
+            driver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), options);
+        } else {
+            throw new Exception("Browser not supported: " + browser);
+        }
 
         System.out.println("Connection established with: " + browser);
         System.out.println("======================================");
@@ -35,12 +54,24 @@ public class AmazonGridTest {
 
         driver.get("https://www.amazon.in");
 
-        driver.findElement(By.id("twotabsearchtextbox"))
-              .sendKeys("iphone");
+        // Explicit wait for search box
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+        WebElement searchInput = wait.until(
+                ExpectedConditions.visibilityOfElementLocated(By.id("twotabsearchtextbox"))
+        );
 
-        driver.findElement(By.id("nav-search-submit-button")).click();
+        searchInput.sendKeys("iphone");
 
-        Assert.assertTrue(driver.getTitle().toLowerCase().contains("iphone"));
+        // Wait and click search button
+        WebElement searchButton = wait.until(
+                ExpectedConditions.elementToBeClickable(By.id("nav-search-submit-button"))
+        );
+        searchButton.click();
+
+        // Verify page title contains 'iphone'
+        wait.until(ExpectedConditions.titleContains("iphone"));
+        Assert.assertTrue(driver.getTitle().toLowerCase().contains("iphone"),
+                "Page title does not contain 'iphone'");
 
         System.out.println("TEST PASSED on " + driver.getTitle());
     }
@@ -48,6 +79,9 @@ public class AmazonGridTest {
     @AfterMethod
     public void tearDown() {
         System.out.println("Closing browser...");
-        driver.quit();
+        if(driver != null) {
+            driver.quit();
+        }
     }
 }
+
