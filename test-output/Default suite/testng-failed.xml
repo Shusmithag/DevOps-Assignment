@@ -5,9 +5,7 @@
     <classes>
       <class name="com.DockerTestUsingGrid.AmazonGridTest">
         <methods>
-          <include name="amazonSearchTest"/>
-          <include name="tearDown"/>
-          <include name="setup"/>
+          <include name="browserTest"/>
         </methods>
       </class> <!-- com.DockerTestUsingGrid.AmazonGridTest -->
     </classes>

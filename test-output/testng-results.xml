@@ -2,12 +2,12 @@
 <testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-02-01T04:26:40 IST" name="Suite" finished-at="2026-02-01T04:26:57 IST" duration-ms="16979">
+  <suite started-at="2026-02-01T04:55:19 IST" name="Suite" finished-at="2026-02-01T04:55:34 IST" duration-ms="14715">
     <groups>
     </groups>
-    <test started-at="2026-02-01T04:26:40 IST" name="ChromeTest" finished-at="2026-02-01T04:26:53 IST" duration-ms="13462">
+    <test started-at="2026-02-01T04:55:19 IST" name="ChromeTest" finished-at="2026-02-01T04:55:32 IST" duration-ms="13165">
       <class name="com.DockerTestUsingGrid.AmazonGridTest">
-        <test-method signature="browserTest(java.lang.String)[pri:0, instance:com.DockerTestUsingGrid.AmazonGridTest@6f1de4c7]" started-at="2026-02-01T04:26:40 IST" name="browserTest" finished-at="2026-02-01T04:26:53 IST" duration-ms="13399" status="PASS">
+        <test-method signature="browserTest(java.lang.String)[pri:0, instance:com.DockerTestUsingGrid.AmazonGridTest@6f1de4c7]" started-at="2026-02-01T04:55:19 IST" name="browserTest" finished-at="2026-02-01T04:55:32 IST" duration-ms="13102" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -20,9 +20,9 @@
         </test-method> <!-- browserTest -->
       </class> <!-- com.DockerTestUsingGrid.AmazonGridTest -->
     </test> <!-- ChromeTest -->
-    <test started-at="2026-02-01T04:26:40 IST" name="EdgeTest" finished-at="2026-02-01T04:26:55 IST" duration-ms="14627">
+    <test started-at="2026-02-01T04:55:19 IST" name="EdgeTest" finished-at="2026-02-01T04:55:33 IST" duration-ms="14173">
       <class name="com.DockerTestUsingGrid.AmazonGridTest">
-        <test-method signature="browserTest(java.lang.String)[pri:0, instance:com.DockerTestUsingGrid.AmazonGridTest@3b0090a4]" started-at="2026-02-01T04:26:40 IST" name="browserTest" finished-at="2026-02-01T04:26:55 IST" duration-ms="14569" status="PASS">
+        <test-method signature="browserTest(java.lang.String)[pri:0, instance:com.DockerTestUsingGrid.AmazonGridTest@3b0090a4]" started-at="2026-02-01T04:55:19 IST" name="browserTest" finished-at="2026-02-01T04:55:33 IST" duration-ms="14117" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -35,9 +35,9 @@
         </test-method> <!-- browserTest -->
       </class> <!-- com.DockerTestUsingGrid.AmazonGridTest -->
     </test> <!-- EdgeTest -->
-    <test started-at="2026-02-01T04:26:40 IST" name="FirefoxTest" finished-at="2026-02-01T04:26:57 IST" duration-ms="16979">
+    <test started-at="2026-02-01T04:55:19 IST" name="FirefoxTest" finished-at="2026-02-01T04:55:34 IST" duration-ms="14715">
       <class name="com.DockerTestUsingGrid.AmazonGridTest">
-        <test-method signature="browserTest(java.lang.String)[pri:0, instance:com.DockerTestUsingGrid.AmazonGridTest@9d5509a]" started-at="2026-02-01T04:26:40 IST" name="browserTest" finished-at="2026-02-01T04:26:57 IST" duration-ms="16923" status="PASS">
+        <test-method signature="browserTest(java.lang.String)[pri:0, instance:com.DockerTestUsingGrid.AmazonGridTest@9d5509a]" started-at="2026-02-01T04:55:19 IST" name="browserTest" finished-at="2026-02-01T04:55:34 IST" duration-ms="14657" status="PASS">
           <params>
             <param index="0">
               <value>
